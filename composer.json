@@ -4,7 +4,7 @@
     "autoload": {
         "psr-4": {
             "Lobster\\Template\\": "src/",
-            "Lobster\\Contracts\\": "src/contracts",
+            "Lobster\\Contracts\\": "src/contracts"
         }
     },
     "require": {
