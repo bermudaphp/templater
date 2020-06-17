@@ -1,12 +1,12 @@
 <?php
 
 
-namespace Lobster\Template\Contracts;
+namespace Lobster\Contracts;
 
 
 /**
  * Interface Renderer
- * @package Lobster\Template\Contracts
+ * @package Lobster\Contracts
  */
 interface Renderer
 {
