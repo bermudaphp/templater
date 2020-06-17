@@ -5,14 +5,11 @@ namespace Lobster\Template;
 
 
 use League\Plates\Engine;
-use Lobster\Routing\Contracts\Generator;
 
 
 /**
  * Class Renderer
  * @package Lobster\Template
- * @mixin Engine
- * @mixin Generator
  */
 class Renderer implements Contracts\Renderer
 {
