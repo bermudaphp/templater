@@ -33,9 +33,9 @@ class RendererFactory
         
         if(($functions = $config['functions']) != [])
         {
-            foreach($functions as $name => $func)
+            foreach($functions as $name => $callback)
             {
-                $renderer->getPlates()->registerFunction($name, $func);
+                $renderer->getPlates()->registerFunction($name, $callback);
             }
         }
         
