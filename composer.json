@@ -1,9 +1,10 @@
 {
-    "name": "lobster-php/template",
+    "name": "lobster-php/templater",
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Lobster\\Template\\": "src/"
+            "Lobster\\Template\\": "src/",
+            "Lobster\\Contracts\\": "src/contracts",
         }
     },
     "require": {
