@@ -1,0 +1,13 @@
+{
+    "name": "lobster-php/template",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Lobster\\Template\\": "src/"
+        }
+    },
+    "require": {
+        "php": ">= 7.4.0",
+        "league/plates": "^3.3.0"
+    }
+}

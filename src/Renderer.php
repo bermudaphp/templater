@@ -42,6 +42,7 @@ class Renderer implements Contracts\Renderer
     {
         return $this->plates;
     }
+
     /**
      * @param string $template
      * @param array $params
