@@ -3,7 +3,7 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Lobster\\Template\\": "src/",
+            "Lobster\\": "src/",
             "Lobster\\Contracts\\": "src/contracts"
         }
     },
