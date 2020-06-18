@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Lobster\Template;
+namespace Lobster;
 
 
 use Psr\Container\ContainerInterface;
@@ -9,7 +9,7 @@ use Psr\Container\ContainerInterface;
 
 /**
  * Class RendererFactory
- * @package Lobster\Template
+ * @package Lobster
  */
 class RendererFactory
 {
