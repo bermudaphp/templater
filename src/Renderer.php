@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Lobster\Template;
+namespace Lobster;
 
 
 use League\Plates\Engine;
@@ -9,7 +9,7 @@ use League\Plates\Engine;
 
 /**
  * Class Renderer
- * @package Lobster\Template
+ * @package Lobster
  */
 class Renderer implements Contracts\Renderer
 {
