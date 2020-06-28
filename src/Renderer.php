@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Lobster;
+namespace Bermuda\Templater;
 
 
 use League\Plates\Engine;
@@ -9,9 +9,9 @@ use League\Plates\Engine;
 
 /**
  * Class Renderer
- * @package Lobster
+ * @package Bermuda\Templater
  */
-class Renderer implements Contracts\Renderer
+class Renderer implements RendererInterface
 {
     private Engine $plates;
 
