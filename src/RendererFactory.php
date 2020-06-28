@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Lobster;
+namespace Bermuda\Templater;
 
 
 use Psr\Container\ContainerInterface;
@@ -9,7 +9,7 @@ use Psr\Container\ContainerInterface;
 
 /**
  * Class RendererFactory
- * @package Lobster
+ * @package Bermuda\Templater
  */
 class RendererFactory
 {
@@ -21,11 +21,10 @@ class RendererFactory
     }
     
     /**
-     * @param array $templates
-     * @param string $ext
-     * @return Renderer
+     * @param ContainerInterface $container
+     * @return RendererInterface
      */
-    public function __invoke() : Renderer
+    public function __invoke(ContainerInterface $container): RendererInterface
     {
         $config = $this->container->get('renderer');
         
