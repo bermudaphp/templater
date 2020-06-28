@@ -1,10 +1,9 @@
 {
-    "name": "lobster-php/templater",
+    "name": "bermudaphp/templater",
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Lobster\\": "src/",
-            "Lobster\\Contracts\\": "src/contracts"
+            "Bermuda\\Templater": "src/"
         }
     },
     "require": {
