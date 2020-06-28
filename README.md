@@ -1,6 +1,6 @@
 # Install
 ```bash
-composer require lobster-php/templater
+composer require bermuda/templater
 ````
 # Usage
 ```php
