@@ -1,14 +1,14 @@
 <?php
 
 
-namespace Lobster\Contracts;
+namespace Bermuda\Templater;
 
 
 /**
- * Interface Renderer
- * @package Lobster\Contracts
+ * Interface RendererInterface
+ * @package Bermuda\Templater
  */
-interface Renderer
+interface RendererInterface
 {
     /**
      * @param string $template
