@@ -1,6 +1,6 @@
 # Install
 ```bash
-composer require bermuda/templater
+composer require bermudaphp/templater
 ````
 # Usage
 ```php
