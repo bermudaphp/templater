@@ -13,31 +13,26 @@ use League\Plates\Engine;
  */
 class Renderer implements RendererInterface
 {
-    private Engine $plates;
+    private Engine $engine;
 
-    /**
-     * Renderer constructor.
-     * @param array $templates
-     * @param string $ext
-     */
     public function __construct(array $templates, string $ext = 'phtml')
     {
-        $this->plates = new Engine();
+        $this->engine = new Engine();
 
         foreach ($templates as $name => $dir)
         {
-            $this->plates->addFolder((string) $name, (string) $dir);
+            $this->engine->addFolder((string) $name, (string) $dir);
         }
 
-        $this->plates->setFileExtension($ext);
+        $this->engine->setFileExtension($ext);
     }
 
     /**
      * @return Engine
      */
-    public function getPlates() : Engine
+    public function getEngine(): Engine
     {
-        return $this->plates;
+        return $this->engine;
     }
 
     /**
