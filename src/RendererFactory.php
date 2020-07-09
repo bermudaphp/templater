@@ -27,7 +27,7 @@ final class RendererFactory
         {
             foreach($functions as $name => $callback)
             {
-                $renderer->getPlates()->registerFunction($name, $callback);
+                $renderer->getEngine()->registerFunction($name, $callback);
             }
         }
         
