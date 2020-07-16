@@ -42,6 +42,6 @@ class Renderer implements RendererInterface
      */
     public function render(string $template, array $params = []): string
     {
-        return $this->plates->render($template, $params);
+        return $this->engine->render($template, $params);
     }
 }
