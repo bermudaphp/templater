@@ -26,9 +26,9 @@ final class RendererFactory
         
         $renderer = new Renderer($config['templates'] ?? [], $config['ext'] ?? 'phtml');
         
-        if(($functions = $config['functions'] ?? []) != [])
+        if (($functions = $config['functions'] ?? []) != [])
         {
-            foreach($functions as $name => $callback)
+            foreach ($functions as $name => $callback)
             {
                 $renderer->getEngine()->registerFunction($name, $callback);
             }
