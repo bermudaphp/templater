@@ -36,9 +36,7 @@ class Renderer implements RendererInterface
     }
 
     /**
-     * @param string $template
-     * @param array $params
-     * @return string
+     * @inheritDoc
      */
     public function render(string $template, array $params = []): string
     {
