@@ -19,11 +19,14 @@ final class RendererFactory
      */
     public function __invoke(ContainerInterface $container): RendererInterface
     {
-        $config = $container->get('renderer');
+        /**
+         * @var array $config
+         */
+        $config = $container->get('config')['renderer'];
         
-        $renderer = new Renderer($config['templates'], $config['ext'] ?? 'phtml');
+        $renderer = new Renderer($config['templates'] ?? [], $config['ext'] ?? 'phtml');
         
-        if(($functions = $config['functions']) != [])
+        if(($functions = $config['functions'] ?? []) != [])
         {
             foreach($functions as $name => $callback)
             {
