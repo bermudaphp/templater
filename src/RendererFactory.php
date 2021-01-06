@@ -1,6 +1,5 @@
 <?php
 
-
 namespace Bermuda\Templater;
 
 
@@ -13,20 +12,25 @@ use Psr\Container\ContainerInterface;
  */
 final class RendererFactory
 {
+    public const configKey = 'renderer';
+    public const configExtKey = 'ext';
+    public const configTemplatesKey = 'templates';
+    public const configExtendersKey = 'extenders';
+        
     /**
      * @param ContainerInterface $container
      * @return RendererInterface
      */
-    public function __invoke(ContainerInterface $container): RendererInterface
+    public function __invoke(ContainerInterface $container): Renderer
     {
         /**
          * @var array $config
          */
-        $config = $container->get('config')['renderer'];
+        $config = $container->get('config')[self::configKey];
         
-        $renderer = new Renderer($config['templates'] ?? [], $config['ext'] ?? 'phtml');
+        $renderer = new Renderer($config[self::configTemplatesKey] ?? [], $config[self::configExtKey] ?? 'phtml');
         
-        foreach ($config['extenders'] ?? [] as $name => $extender)
+        foreach ($config[self::configExtendersKey] ?? [] as $name => $extender)
         {
             $renderer->getEngine()->registerFunction($name, $extender);
         }
