@@ -10,7 +10,7 @@ use Psr\Container\ContainerInterface;
  * Class RendererFactory
  * @package Bermuda\Templater
  */
-final class RendererFactory
+class RendererFactory
 {
     public const configKey = 'renderer';
     public const configExtKey = 'ext';
@@ -19,9 +19,9 @@ final class RendererFactory
         
     /**
      * @param ContainerInterface $container
-     * @return RendererInterface
+     * @return Renderer
      */
-    public function __invoke(ContainerInterface $container): Renderer
+    public function __invoke(ContainerInterface $container): RendererInterface
     {
         /**
          * @var array $config
