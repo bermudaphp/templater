@@ -14,7 +14,7 @@ final class RendererFactory
 {
     public const configKey = 'renderer';
     public const configExtKey = 'ext';
-    public const configTemplatesKey = 'templates';
+    public const configTemplatesFoldersKey = 'templates';
     public const configExtendersKey = 'extenders';
         
     /**
@@ -28,7 +28,7 @@ final class RendererFactory
          */
         $config = $container->get('config')[self::configKey];
         
-        $renderer = new Renderer($config[self::configTemplatesKey] ?? [], $config[self::configExtKey] ?? 'phtml');
+        $renderer = new Renderer($config[self::configTemplatesFoldersKey] ?? [], $config[self::configExtKey] ?? 'phtml');
         
         foreach ($config[self::configExtendersKey] ?? [] as $name => $extender)
         {
