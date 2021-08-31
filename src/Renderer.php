@@ -1,11 +1,6 @@
 <?php
 
-
 namespace Bermuda\Templater;
-
-
-use League\Plates\Engine;
-
 
 /**
  * Class Renderer
