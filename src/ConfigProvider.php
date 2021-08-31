@@ -2,11 +2,17 @@
 
 namespace Bermuda\Templater;
 
-
-final class ConfigProvider
+/**
+ * Class ConfigProvider
+ * @package Bermuda\Templater
+ */
+final class ConfigProvider extends \Bermuda\Config\ConfigProvider
 {
-    public function __invoke(): array
+    /**
+     * @inheritDoc
+     */
+    protected function getFactories(): array
     {
-        return ['dependencies' => ['factories' => [RendererInterface::class => RendererFactory::class]]];
+        return [RendererInterface::class => RendererFactory::class];
     }
 }
