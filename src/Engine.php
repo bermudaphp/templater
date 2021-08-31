@@ -20,7 +20,7 @@ class Engine extends PlatesEngine
         
         elseif (is_subclass_of($template = 'App\View\Template', Template::class))
         {
-            $this->templateFactory = static fn(Engine $engine, string $name): Template => $template($engine, $name);
+            $this->templateFactory = static fn(Engine $engine, string $name): Template => new $template($engine, $name);
         }
     }
   
