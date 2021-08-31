@@ -13,17 +13,14 @@ class Engine extends PlatesEngine
     {
         parent::__construct($directory, $fileExtension);
         
-        if ($templateFactory =! null)
+        if ($templateFactory ==! null)
         {
             $this->setTemplateFactory($templateFactory);
         }
         
-        elseif (is_subclass_of('App\View\Template', Template::class)) 
+        elseif (is_subclass_of($template = 'App\View\Template', Template::class))
         {
-            $this->templateFactory = static fn(Engine $engine, string $name): Template
-            {
-                return new \App\View\Template($engine, $name);
-            }
+            $this->templateFactory = static fn(Engine $engine, string $name): Template => $template($engine, $name);
         }
     }
   
