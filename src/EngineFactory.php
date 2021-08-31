@@ -4,10 +4,6 @@ namespace Bermuda\Templater;
 
 use Psr\Container\ContainerInterface;
 
-/**
- * Class RendererFactory
- * @package Bermuda\Templater
- */
 final class EngineFactory
 {
     public const configTemplatesDir = 'templates_dir';
@@ -20,7 +16,7 @@ final class EngineFactory
      * @param ContainerInterface $container
      * @return Renderer
      */
-    public function __invoke(ContainerInterface $container): RendererInterface
+    public function __invoke(ContainerInterface $container): Engine
     {
         $config = $this->getConfig($container);
       
@@ -28,15 +24,15 @@ final class EngineFactory
             $config[self::configTemplatesDir], 
             $config[self::configExtKey]
         );
-        
+
         foreach ($config[self::configTemplatesFoldersKey] as $templateName => $templateDir)
         {
-            $this->engine->addFolder((string) $templateName, (string) $templateDir);
+            $engine->addFolder((string) $templateName, (string) $templateDir);
         }
 
         foreach ($config[self::configExtendersKey] as $funcName => $extender)
         {
-            $renderer->getEngine()->registerFunction($funcName, $extender);
+            $engine->registerFunction($funcName, $extender);
         }
         
         return $engine;
@@ -47,7 +43,7 @@ final class EngineFactory
         $config = $container->get('config')[self::configKey] ?? [];
         
         return array_merge([
-          self::configTemplatesDir => APP_ROOT.'/templates',
+          self::configTemplatesDir => null,
           self::configExtKey => 'phtml',
           self::configTemplatesFoldersKey => [],
           self::configExtendersKey => []
