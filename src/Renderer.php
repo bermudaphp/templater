@@ -10,9 +10,9 @@ class Renderer implements RendererInterface
 {
     private Engine $engine;
 
-    public function __construct(Engine $engin)
+    public function __construct(Engine $engin = null)
     {
-        $this->engine = $engine;
+        $this->engine = $engine ?? new Engine();
     }
 
     /**
