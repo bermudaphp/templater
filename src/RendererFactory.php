@@ -8,7 +8,7 @@ use Psr\Container\ContainerInterface;
  * Class RendererFactory
  * @package Bermuda\Templater
  */
-class RendererFactory
+final class RendererFactory
 {
     public const configKey = EngineFactory::configKey;
     public const configExtKey = EngineFactory::configExtKey;
@@ -19,7 +19,12 @@ class RendererFactory
      * @param ContainerInterface $container
      * @return Renderer
      */
-    public function __invoke(ContainerInterface $container): RendererInterface
+    public function __invoke(ContainerInterface $container): Renderer
+    {
+        return self::fromContainer($container);
+    }
+    
+    public static function fromContainer(ContainerInterface $container): Renderer
     {
         return new Renderer($container->get(Engine::class));
     }
