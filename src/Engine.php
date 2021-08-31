@@ -9,7 +9,7 @@ class Engine extends PlatesEngine
 {
     private $templateFactory = null;
     
-    public function __construct(string $directory = null, string $fileExtension = 'php', ?callable $templateFactory = null)
+    public function __construct(string $directory = null, string $fileExtension = 'phtml', ?callable $templateFactory = null)
     {
         parent::__construct($directory, $fileExtension);
         
