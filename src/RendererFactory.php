@@ -4,10 +4,6 @@ namespace Bermuda\Templater;
 
 use Psr\Container\ContainerInterface;
 
-/**
- * Class RendererFactory
- * @package Bermuda\Templater
- */
 final class RendererFactory
 {
     public const configKey = EngineFactory::configKey;
