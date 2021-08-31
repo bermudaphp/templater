@@ -21,22 +21,6 @@ class RendererFactory
      */
     public function __invoke(ContainerInterface $container): RendererInterface
     {
-        /**
-         * @var array $config
-         */
-        $config = $container->get('config')[self::configKey];
-         
-        $renderer = new Renderer(
-            $config[self::configTemplatesFoldersKey] ?? [], 
-            $config[self::configExtKey] ?? 'phtml', 
-            $container->get(Engine::class)
-        );
-        
-        foreach ($config[self::configExtendersKey] ?? [] as $name => $extender)
-        {
-            $renderer->getEngine()->registerFunction($name, $extender);
-        }
-        
-        return $renderer;
+        return new Renderer($container->get(Engine::class));
     }
 }
