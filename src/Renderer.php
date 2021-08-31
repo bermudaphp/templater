@@ -2,10 +2,6 @@
 
 namespace Bermuda\Templater;
 
-/**
- * Class Renderer
- * @package Bermuda\Templater
- */
 class Renderer implements RendererInterface
 {
     private Engine $engine;
