@@ -14,8 +14,8 @@ final class ConfigProvider extends \Bermuda\Config\ConfigProvider
     protected function getFactories(): array
     {
         return [
-            RendererInterface::class => RendererFactory::class.
             Engine::class => EngineFactory::class,
+            RendererInterface::class => RendererFactory::class,
         ];
     }
 }
