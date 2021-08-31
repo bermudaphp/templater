@@ -2,10 +2,6 @@
 
 namespace Bermuda\Templater;
 
-/**
- * Class ConfigProvider
- * @package Bermuda\Templater
- */
 final class ConfigProvider extends \Bermuda\Config\ConfigProvider
 {
     /**
