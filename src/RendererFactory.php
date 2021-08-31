@@ -10,10 +10,10 @@ use Psr\Container\ContainerInterface;
  */
 class RendererFactory
 {
-    public const configKey = 'renderer';
-    public const configExtKey = 'ext';
-    public const configTemplatesFoldersKey = 'templates';
-    public const configExtendersKey = 'extenders';
+    public const configKey = EngineFactory::configKey;
+    public const configExtKey = EngineFactory::configExtKey;
+    public const configTemplatesFoldersKey = EngineFactory::configTemplatesFoldersKey;
+    public const configExtendersKey = EngineFactory::configExtendersKey;
         
     /**
      * @param ContainerInterface $container
