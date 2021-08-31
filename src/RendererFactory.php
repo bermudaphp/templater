@@ -2,9 +2,7 @@
 
 namespace Bermuda\Templater;
 
-
 use Psr\Container\ContainerInterface;
-
 
 /**
  * Class RendererFactory
