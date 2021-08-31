@@ -5,9 +5,6 @@ namespace Bermuda\Templater;
 use League\Plates\Engine as PlatesEngine;
 use League\Plates\Template\Template;
 
-/**
- * Template API and environment settings storage.
- */
 class Engine extends PlatesEngine
 {
     private $templateFactory = null;
