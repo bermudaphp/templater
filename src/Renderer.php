@@ -10,9 +10,9 @@ class Renderer implements RendererInterface
 {
     private Engine $engine;
 
-    public function __construct(array $templates, string $ext = 'phtml')
+    public function __construct(array $templates, string $ext = 'phtml', Engine $engin = null)
     {
-        $this->engine = new Engine();
+        $this->engine = $engine ?? new Engine();
 
         foreach ($templates as $name => $dir)
         {
