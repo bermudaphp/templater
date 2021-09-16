@@ -2,7 +2,7 @@
 
 namespace Bermuda\Templater;
 
-class Renderer implements RendererInterface
+final class Renderer implements RendererInterface
 {
     private Engine $engine;
 
